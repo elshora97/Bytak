@@ -6,18 +6,20 @@ import { Suspense } from "react";
 async function HomePage({
   searchParams,
 }: {
-  searchParams: { categoty?: string; search?: string };
+  searchParams: { category?: string; search?: string };
 }) {
   const params = await searchParams;
+  console.log(params);
+
   return (
     <section>
       <CategoriesList
-        category={params?.categoty}
+        category={params?.category}
         search={params?.search}
       />
       <Suspense fallback={<LoadingCards />}>
         <PropertiesContainer
-          category={params?.categoty}
+          category={params?.category}
           search={params?.search}
         />
       </Suspense>
