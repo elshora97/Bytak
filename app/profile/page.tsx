@@ -5,8 +5,8 @@ import {
   updateProfileImageAction,
 } from "@/utils/actions";
 import FormInput from "@/components/form/FormInput";
-import SubmitButton from "@/components/form/SubmitButton";
 import ImageInputContainer from "@/components/form/ImageInputContainer";
+import { SubmitButton } from "@/components/form/Button";
 
 async function ProfilePage() {
   const profile = await fetchProfile();

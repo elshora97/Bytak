@@ -9,7 +9,6 @@ async function HomePage({
   searchParams: { category?: string; search?: string };
 }) {
   const params = await searchParams;
-  console.log(params);
 
   return (
     <section>
