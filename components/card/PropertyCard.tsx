@@ -11,7 +11,7 @@ function PropertyCard({ property }: { property: PropertyCardProps }) {
 
   return (
     <article className="group relative">
-      <Link href={`/property/${propertyId}`}>
+      <Link href={`/properties/${propertyId}`}>
         <div className="relative h-[300px] mb-2 overflow-hidden rounded-md">
           <Image
             src={image}
@@ -38,7 +38,7 @@ function PropertyCard({ property }: { property: PropertyCardProps }) {
             <span className="font-semibold">{formatCurrency(price)} </span>
             night
           </p>
-          <CountryFlagAndName countyCode={country} />
+          <CountryFlagAndName countryCode={country} />
         </div>
       </Link>
       <div className="absolute top-5 right-5 z-5">
