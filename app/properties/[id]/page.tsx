@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import FavoriteToggleButton from "@/components/card/FavoriteToggleButton";
 import PropertyRating from "@/components/card/PropertyRating";
 import Amenities from "@/components/properties/Amenities";
@@ -17,6 +18,7 @@ import { redirect } from "next/navigation";
 const DynamicMap = dynamic(
   () => import("@/components/properties/PropertyMap"),
   {
+    ssr: false,
     loading: () => <Skeleton className="h-[400px] w-full" />,
   }
 );
