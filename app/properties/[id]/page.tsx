@@ -18,7 +18,7 @@ import { redirect } from "next/navigation";
 const DynamicMap = dynamic(
   () => import("@/components/properties/PropertyMap"),
   {
-    ssr: false,
+    // ssr: false,
     loading: () => <Skeleton className="h-[400px] w-full" />,
   }
 );
